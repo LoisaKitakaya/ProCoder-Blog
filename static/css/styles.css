@@ -1,0 +1,35 @@
+/* index.html navigation section stylings */
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-container {
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-container img {
+  padding: 5px;
+}
+
+.right-container {
+  padding-right: 5px;
+}
+
+.right-container a {
+  margin: 5px;
+  color: white;
+}
+
+.right-container a:hover {
+  text-decoration: underline;
+}
+
+.search-box {
+  padding: 10px;
+  margin: auto;
+}
