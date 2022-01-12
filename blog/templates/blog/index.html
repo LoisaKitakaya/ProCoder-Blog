@@ -25,7 +25,7 @@
     <div class="navigation-container">
       <!-- page logo -->
       <div class="logo-container">
-        <a href="#">
+        <a href="{% url 'home' %}">
           <img src="{% static 'img/procoder_logo.png' %}" alt="website logo" />
         </a>
       </div>
@@ -42,7 +42,7 @@
       <div class="row">
         <!-- nav tab -->
         <div class="col-md-auto nav-tab">
-          <a href="#" class="btn btn-outline-primary">Home</a>
+          <a href="{% url 'home' %}" class="btn btn-outline-primary">Home</a>
           <a href="#" class="btn btn-outline-primary">Tags</a>
           <a href="#" class="btn btn-outline-primary">FAQs</a>
           <a href="#" class="btn btn-outline-primary">About</a>
@@ -55,6 +55,33 @@
         </div>
         <!-- blog tab -->
         <div class="col">
+          <!-- blog post -->
+
+          <!-- begin if -->
+          {% if posts %}
+          <!-- begin ig -->
+
+          <!-- begin for -->
+          {% for post in posts %}
+          <!-- begin for -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">
+              Posted by: {{ post.author }}
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">{{ post.title }}</h3>
+              <p class="card-text">{{ post.content | slice:":200" }}</p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">{{ post.created_on }}</div>
+          </div>
+          <!-- end for -->
+          {% endfor %}
+          <!-- end for -->
+
+          <!-- else -->
+          {% else %}
+          <!-- else -->
           <div class="card blog-card">
             <div class="card-header text-muted">Posted by: John Doe</div>
             <div class="card-body">
@@ -71,91 +98,10 @@
             </div>
             <div class="card-footer text-muted">Posted: 2 days ago</div>
           </div>
-          <!--  -->
-          <div class="card blog-card">
-            <div class="card-header text-muted">Posted by: John Doe</div>
-            <div class="card-body">
-              <h3 class="card-title">Post title</h3>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias iusto corrupti, odit enim quisquam facere odio alias
-                minus corporis vero eligendi nam earum sed iste dolores, ut
-                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
-                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
-                Perspiciatis corrupti incidunt sit ut quibusdam!
-              </p>
-              <a href="#" class="btn btn-primary">Read post</a>
-            </div>
-            <div class="card-footer text-muted">Posted: 2 days ago</div>
-          </div>
-          <!--  -->
-          <div class="card blog-card">
-            <div class="card-header text-muted">Posted by: John Doe</div>
-            <div class="card-body">
-              <h3 class="card-title">Post title</h3>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias iusto corrupti, odit enim quisquam facere odio alias
-                minus corporis vero eligendi nam earum sed iste dolores, ut
-                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
-                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
-                Perspiciatis corrupti incidunt sit ut quibusdam!
-              </p>
-              <a href="#" class="btn btn-primary">Read post</a>
-            </div>
-            <div class="card-footer text-muted">Posted: 2 days ago</div>
-          </div>
-          <!--  -->
-          <div class="card blog-card">
-            <div class="card-header text-muted">Posted by: John Doe</div>
-            <div class="card-body">
-              <h3 class="card-title">Post title</h3>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias iusto corrupti, odit enim quisquam facere odio alias
-                minus corporis vero eligendi nam earum sed iste dolores, ut
-                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
-                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
-                Perspiciatis corrupti incidunt sit ut quibusdam!
-              </p>
-              <a href="#" class="btn btn-primary">Read post</a>
-            </div>
-            <div class="card-footer text-muted">Posted: 2 days ago</div>
-          </div>
-          <!--  -->
-          <div class="card blog-card">
-            <div class="card-header text-muted">Posted by: John Doe</div>
-            <div class="card-body">
-              <h3 class="card-title">Post title</h3>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias iusto corrupti, odit enim quisquam facere odio alias
-                minus corporis vero eligendi nam earum sed iste dolores, ut
-                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
-                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
-                Perspiciatis corrupti incidunt sit ut quibusdam!
-              </p>
-              <a href="#" class="btn btn-primary">Read post</a>
-            </div>
-            <div class="card-footer text-muted">Posted: 2 days ago</div>
-          </div>
-          <!--  -->
-          <div class="card blog-card">
-            <div class="card-header text-muted">Posted by: John Doe</div>
-            <div class="card-body">
-              <h3 class="card-title">Post title</h3>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias iusto corrupti, odit enim quisquam facere odio alias
-                minus corporis vero eligendi nam earum sed iste dolores, ut
-                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
-                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
-                Perspiciatis corrupti incidunt sit ut quibusdam!
-              </p>
-              <a href="#" class="btn btn-primary">Read post</a>
-            </div>
-            <div class="card-footer text-muted">Posted: 2 days ago</div>
-          </div>
+
+          <!-- end if -->
+          {% endif %}
+          <!-- end if -->
         </div>
 
         <!-- news tab -->
