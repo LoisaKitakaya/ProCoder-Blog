@@ -58,30 +58,18 @@
           <!-- blog post -->
 
           <!-- begin if -->
-          {% if posts %}
+          {% if object %}
           <!-- begin ig -->
-
-          <!-- begin for -->
-          {% for post in posts %}
-          <!-- begin for -->
           <div class="card blog-card">
             <div class="card-header text-muted">
-              Posted by: {{ post.author }}
+              Posted by: {{ article.author }}
             </div>
             <div class="card-body">
-              <h3 class="card-title">{{ post.title }}</h3>
-              <p class="card-text">{{ post.content | slice:":200" }}</p>
-              <a href="{% url 'article' post.slug %}" class="btn btn-primary"
-                >Read post</a
-              >
+              <h3 class="card-title">{{ article.title }}</h3>
+              <p class="card-text">{{ article.content }}</p>
             </div>
-            <div class="card-footer text-muted">
-              Posted on: {{ post.created_on }}
-            </div>
+            <div class="card-footer text-muted">{{ article.created_on }}</div>
           </div>
-          <!-- end for -->
-          {% endfor %}
-          <!-- end for -->
 
           <!-- else -->
           {% else %}
@@ -89,15 +77,13 @@
           <div class="card blog-card">
             <div class="card-header text-muted">Posted by:</div>
             <div class="card-body">
-              <h3 class="card-title">Welcome to ProCoder!</h3>
+              <h3 class="card-title">Oops! Something went wrong!</h3>
               <p class="card-text">
-                Hello There! The reason you are seeing this message is because
-                you are lucky enough to be the first person to visit this page
-                while no blog articles have been posted yet! Click the "Create
-                your first post" button and be the firs person to post on this
-                blog!
+                Something went wrong! We are sorry for the inconvinience... The
+                information your are looking for appears to be missing from the
+                database. Please read a different blog as we work hard to bring
+                this missing one back!
               </p>
-              <a href="#" class="btn btn-primary">Create your first post</a>
             </div>
             <div class="card-footer text-muted">Posted:</div>
           </div>
@@ -105,27 +91,6 @@
           <!-- end if -->
           {% endif %}
           <!-- end if -->
-        </div>
-
-        <!-- news tab -->
-        <div class="col-md-auto">
-          <div class="card text-center" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">Tech News</h5>
-              <p class="card-text">
-                While you are here... Feel free to check out top technology and
-                development news from top news sources.
-                <br />
-                The various articles and breaking news headlines from news
-                sources and blogs across the web, as you shall find are powered
-                by:
-                <a href="https://newsapi.org">
-                  <span id="news-api">News API</span>
-                </a>
-              </p>
-              <a href="#" class="btn btn-success">See news</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
