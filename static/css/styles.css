@@ -1,4 +1,7 @@
-/* index.html navigation section stylings */
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 #index-body {
   background-color: whitesmoke;
@@ -64,4 +67,20 @@
 
 .card-body h5 {
   text-decoration: underline;
+}
+
+.img-fluid {
+  margin: 10px 0;
+}
+
+.img-thumbnail {
+  margin: 5px 0;
+}
+
+.back-top {
+  height: 32px;
+  width: 32px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }

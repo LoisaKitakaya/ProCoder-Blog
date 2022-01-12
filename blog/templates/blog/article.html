@@ -59,6 +59,13 @@
           <a href="#" class="btn btn-outline-secondary">Privacy policy</a>
           <a href="#" class="btn btn-outline-secondary">Terms of use</a>
           <br />
+          <a href="#" id="top-btn"  onclick="topFunction()">
+            <img
+              src="{% static 'img/arrow-up-circle-fill.svg' %}"
+              alt="back top icon"
+              class="back-top"
+            />
+          </a>
         </div>
         <!-- blog tab -->
         <div class="col">
@@ -73,6 +80,11 @@
             </div>
             <div class="card-body">
               <h3 class="card-title">{{ article.title }}</h3>
+              <img
+                src="{{ article.thumbnail.url }}"
+                class="img-fluid"
+                alt="article.title"
+              />
               <p class="card-text">{{ article.content }}</p>
             </div>
             <div class="card-footer text-muted">{{ article.created_on }}</div>
@@ -102,6 +114,8 @@
       </div>
     </div>
   </body>
+  <!-- js -->
+  <script src="{% static 'js/main.js' %}"></script>
   <!-- bootstrap bundle js -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
