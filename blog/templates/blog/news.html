@@ -24,7 +24,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>ProCoder | Home</title>
+    <title>ProCoder | News</title>
   </head>
   <body id="index-body">
     <!-- navigation -->
@@ -65,25 +65,28 @@
           <!-- blog post -->
 
           <!-- begin if -->
-          {% if posts %}
+          {% if news_feed %}
           <!-- begin ig -->
 
           <!-- begin for -->
-          {% for post in posts %}
+          {% for feed in news_feed %}
           <!-- begin for -->
           <div class="card blog-card">
             <div class="card-header text-muted">
-              Posted by: {{ post.author }}
+              Posted by: {{ feed.source.name }}
             </div>
             <div class="card-body">
-              <h3 class="card-title">{{ post.title }}</h3>
-              <p class="card-text">{{ post.content | slice:":200" }}</p>
-              <a href="{% url 'article' post.slug %}" class="btn btn-primary"
-                >Read post</a
-              >
+              <h3 class="card-title">{{ feed.title }}</h3>
+              <img
+                src="{{ feed.urlToImage }}"
+                class="img-thumbnail"
+                alt="{{ feed.title }}"
+              />
+              <p class="card-text">{{ feed.description }}</p>
+              <a href="{{ feed.url }}" class="btn btn-primary">Read post</a>
             </div>
             <div class="card-footer text-muted">
-              Posted on: {{ post.created_on }}
+              Posted on: {{ feed.publishedAt }}
             </div>
           </div>
           <!-- end for -->
@@ -120,17 +123,10 @@
             <div class="card-body">
               <h5 class="card-title">Tech News</h5>
               <p class="card-text">
-                While you are here... Feel free to check out top technology and
-                development news from top news sources.
-                <br />
-                The various articles and breaking news headlines from news
-                sources and blogs across the web, as you shall find are powered
-                by:
-                <a href="https://newsapi.org">
-                  <span id="news-api">News API</span>
-                </a>
+                Welcome to Tech News! Here you will find all sorts of tech and
+                tech related news headlines from top news bodies in the world
+                and in the web.
               </p>
-              <a href="{% url 'news' %}" class="btn btn-success">See news</a>
             </div>
           </div>
         </div>
