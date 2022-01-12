@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* border-bottom: solid 1px rgb(124, 124, 124); */
   -webkit-box-shadow: 0px 5px 10px 0px #7c7c7c;
   box-shadow: 0px 5px 10px 0px #7c7c7c;
   position: sticky;
@@ -26,20 +25,8 @@ body {
   z-index: 99;
 }
 
-.logo-container img {
+.navigation-container img {
   padding: 5px;
-}
-
-.dash-container {
-  padding-right: 5px;
-}
-
-.dash-container a {
-  margin: 5px;
-}
-
-.dash-container a:hover {
-  text-decoration: underline;
 }
 
 .container {
@@ -78,9 +65,6 @@ body {
 }
 
 .back-top {
-  height: 32px;
-  width: 32px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+  height: 48px;
+  width: 48px;
 }

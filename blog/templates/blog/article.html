@@ -30,17 +30,16 @@
     <!-- navigation -->
     <div class="navigation-container">
       <!-- page logo -->
-      <div class="logo-container">
-        <a href="{% url 'home' %}">
-          <img src="{% static 'img/procoder_logo.png' %}" alt="website logo" />
-        </a>
-      </div>
-      <div class="dash-container">
-        <a class="btn btn-outline-success" href="#">Login</a>
-        <a class="btn btn-outline-primary" href="#">Create Account</a>
-        <a class="btn btn-outline-warning" href="#">Create Post</a>
-        <a class="btn btn-outline-danger" href="#">Logout</a>
-      </div>
+      <a href="{% url 'home' %}">
+        <img src="{% static 'img/procoder_logo.png' %}" alt="website logo" />
+      </a>
+      <a href="#" id="top-btn" onclick="topFunction()">
+        <img
+          src="{% static 'img/arrow-up-circle-fill.svg' %}"
+          alt="back top icon"
+          class="back-top"
+        />
+      </a>
     </div>
 
     <!-- content -->
@@ -59,13 +58,6 @@
           <a href="#" class="btn btn-outline-secondary">Privacy policy</a>
           <a href="#" class="btn btn-outline-secondary">Terms of use</a>
           <br />
-          <a href="#" id="top-btn"  onclick="topFunction()">
-            <img
-              src="{% static 'img/arrow-up-circle-fill.svg' %}"
-              alt="back top icon"
-              class="back-top"
-            />
-          </a>
         </div>
         <!-- blog tab -->
         <div class="col">
