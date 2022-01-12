@@ -7,4 +7,5 @@ from .views import *
 urlpatterns = [
     path('', home, name='home'),
     path('article/<slug:slug>/', ArticleDetail.as_view(), name='article'),
+    path('news', news, name='news'),
 ]
