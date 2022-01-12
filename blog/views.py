@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+import requests
 from .models import *
 
 # Create your views here.
@@ -19,3 +20,27 @@ def home(request):
 class ArticleDetail(generic.DetailView):
     model = Article
     template_name = 'blog/article.html'
+
+
+# news/news.html view
+def news(request):
+
+    # response = requests.get('https://newsapi.org/v2/everything?q=software&sources=the-verge,bbc-news,ars-technica,bloomberg,business-insider&language=en&apiKey=664f61cf91624b3098f8825a6282e25e')
+
+    # news_feed = response.json()
+
+    from newsapi import NewsApiClient
+
+    # Init
+    newsapi = NewsApiClient(api_key='664f61cf91624b3098f8825a6282e25e')
+
+    # /v2/top-headlines
+    news_feed = newsapi.get_everything(q='software', sources='the-verge,bbc-news,ars-technica,bloomberg,business-insider', language='en', sort_by='relevancy')
+
+    print(news_feed)
+
+    context = {
+        'news_feed' : news_feed['articles']
+    }
+
+    return render(request, 'blog/news.html', context)
