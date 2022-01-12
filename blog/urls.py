@@ -6,4 +6,5 @@ from .views import *
 # mapping app urls
 urlpatterns = [
     path('', home, name='home'),
+    path('article/<slug:slug>/', ArticleDetail.as_view(), name='article'),
 ]
