@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'procoder.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'procoderdb',
-        'USER': 'postgres',
-        'PASSWORD': '#Kitloisa15',
-        'HOST': 'localhost',
+        'NAME': 'd465930ps62q7t',
+        'USER': 'xwyasixwuksfsh',
+        'PASSWORD': '7035271c799e11315aa098c1c44dbe2ba55c0aeb1eed3ba0b229bc8c6be9f08a',
+        'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
