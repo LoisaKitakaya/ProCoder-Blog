@@ -20,47 +20,164 @@
     />
     <title>ProCoder | Home</title>
   </head>
-  <body>
-    <!-- top container -->
-    <div class="top-container">
-      <!-- navigation -->
-      <div class="navigation-container">
-        <div class="left-container">
-          <a href="#">
-            <img
-              src="{% static 'img/procoder_logo.png' %}"
-              alt="website logo"
-            />
-          </a>
-        </div>
-        <div class="right-container">
-          <a class="btn btn-outline-success" href="#">Login</a>
-          <a class="btn btn-outline-primary" href="#">Create Account</a>
-          <a class="btn btn-outline-warning" href="#">Dashboard</a>
-          <a class="btn btn-outline-danger" href="#">Logout</a>
-        </div>
+  <body id="index-body">
+    <!-- navigation -->
+    <div class="navigation-container">
+      <!-- page logo -->
+      <div class="logo-container">
+        <a href="#">
+          <img src="{% static 'img/procoder_logo.png' %}" alt="website logo" />
+        </a>
       </div>
+      <div class="dash-container">
+        <a class="btn btn-outline-success" href="#">Login</a>
+        <a class="btn btn-outline-primary" href="#">Create Account</a>
+        <a class="btn btn-outline-warning" href="#">Create Post</a>
+        <a class="btn btn-outline-danger" href="#">Logout</a>
+      </div>
+    </div>
 
-      <!-- search box -->
-      <div class="col-sm-3 col-md-3 pull-right search-box">
-        <form class="navbar-form" role="search">
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search blog"
-              name="srch-term"
-              id="srch-term"
-            />
-            <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <i class="glyphicon glyphicon-search">
-                  <img src="{% static 'img/search.svg' %}" alt="" />
-                </i>
-              </button>
+    <!-- content -->
+    <div class="container">
+      <div class="row">
+        <!-- nav tab -->
+        <div class="col-md-auto nav-tab">
+          <a href="#" class="btn btn-outline-primary">Home</a>
+          <a href="#" class="btn btn-outline-primary">Tags</a>
+          <a href="#" class="btn btn-outline-primary">FAQs</a>
+          <a href="#" class="btn btn-outline-primary">About</a>
+          <a href="#" class="btn btn-outline-primary">Contacts</a>
+          <br />
+          <a href="#" class="btn btn-outline-secondary">Code of conduct</a>
+          <a href="#" class="btn btn-outline-secondary">Privacy policy</a>
+          <a href="#" class="btn btn-outline-secondary">Terms of use</a>
+          <br />
+        </div>
+        <!-- blog tab -->
+        <div class="col">
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+          <!--  -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+          <!--  -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+          <!--  -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+          <!--  -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+          <!--  -->
+          <div class="card blog-card">
+            <div class="card-header text-muted">Posted by: John Doe</div>
+            <div class="card-body">
+              <h3 class="card-title">Post title</h3>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Molestias iusto corrupti, odit enim quisquam facere odio alias
+                minus corporis vero eligendi nam earum sed iste dolores, ut
+                esse. Ducimus omnis tempore dolore hic aspernatur dolor pariatur
+                ad eius tenetur quidem? Sit necessitatibus cupiditate fugiat.
+                Perspiciatis corrupti incidunt sit ut quibusdam!
+              </p>
+              <a href="#" class="btn btn-primary">Read post</a>
+            </div>
+            <div class="card-footer text-muted">Posted: 2 days ago</div>
+          </div>
+        </div>
+
+        <!-- news tab -->
+        <div class="col-md-auto">
+          <div class="card text-center" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">Tech News</h5>
+              <p class="card-text">
+                While you are here... Feel free to check out top technology and
+                development news from top news sources.
+                <br />
+                The various articles and breaking news headlines from news
+                sources and blogs across the web, as you shall find are powered
+                by:
+                <a href="https://newsapi.org">
+                  <span id="news-api">News API</span>
+                </a>
+              </p>
+              <a href="#" class="btn btn-success">See news</a>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </body>
