@@ -32,8 +32,6 @@ def news(request):
     # /v2/top-headlines
     news_feed = newsapi.get_everything(q='software', sources='the-verge,bbc-news,ars-technica,bloomberg,business-insider', language='en', sort_by='relevancy')
 
-    print(news_feed)
-
     context = {
         'news_feed' : news_feed['articles']
     }
