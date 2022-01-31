@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from .models import *
 from .forms import *
+import os
 
 # Create your views here.
 
@@ -28,7 +29,7 @@ def news(request):
     from newsapi import NewsApiClient
 
     # Init
-    newsapi = NewsApiClient(api_key='664f61cf91624b3098f8825a6282e25e')
+    newsapi = NewsApiClient(api_key=os.getenv('api_key'))
 
     # /v2/top-headlines
     news_feed = newsapi.get_everything(q='software', sources='the-verge,bbc-news,ars-technica,bloomberg,business-insider', language='en', sort_by='relevancy')
